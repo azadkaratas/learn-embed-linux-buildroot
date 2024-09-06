@@ -1,0 +1,1 @@
+BR2_ROOTFS_POST_BUILD_SCRIPT += $(BR2_EXTERNAL_HEADLESS_WIFI_SETUP_PATH)/board/raspberrypi0w/post-build.sh

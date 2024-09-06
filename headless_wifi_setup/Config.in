@@ -1,0 +1,5 @@
+menu "Select the Raspberry Pi board for external headless WiFi setup"
+
+source "$BR2_EXTERNAL_HEADLESS_WIFI_SETUP_PATH/board/raspberrypi0w/Config.in"
+
+endmenu

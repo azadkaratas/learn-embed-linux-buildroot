@@ -1,0 +1,17 @@
+# Learning Embedded Linux with Buildroot
+This repository serves as a learning platform for understanding and experimenting with embedded Linux using Buildroot. The primary focus of this repository is to explore the process of building embedded Linux systems from scratch through simple yet practical examples. It includes sample projects configured for Raspberry Pi Zero W and Raspberry Pi 3B+ boards. However, the structure of the projects allows for easy modification and adaptation to other embedded boards, offering flexibility for diverse development needs.
+
+Buildroot is an excellent tool for generating minimal and optimized Linux distributions for embedded systems. Through the projects in this repository, I aim to demonstrate how Buildroot can be configured for specific hardware, including board-specific settings, kernel configurations, package integration, and custom scripts, all while exploring the intricacies of the embedded Linux ecosystem.
+
+## Projects
+---
+#### [Headless WiFi Setup](/headless_wifi_setup/README)
+
+In this simple and first project, buildroot is configured to work with static address WiFi mode and SSH support.
+Necessary files needs to be changed are under board/ folder. Copying these files to the related places is written
+in post build script.
+
+With interfaces file, we set our device a static IP. Make sure address is unique in your network domain and other parameters are correct. Do not forget to set your WiFi credentials in wpa_supplicant.conf.
+
+---
+All suggestions, bug reports and contributions are welcomed.
