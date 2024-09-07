@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case $1 in
+    start)
+	printf "Starting periodiclogger: "
+	start-stop-daemon -S -q -p /var/run/periodiclogger.pid --exec /usr/bin/periodiclogger
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    stop)
+	printf "Stopping periodiclogger: "
+	start-stop-daemon -K -q -p /var/run/periodiclogger.pid
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    restart)
+	$0 stop
+	$0 start
+	;;
+    *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+	;;
+esac

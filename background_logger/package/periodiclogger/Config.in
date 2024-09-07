@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PERIODICLOGGER
+        bool "periodiclogger"
+		default y
+        help
+          Runs as background daemon. Periodically logs the counter.

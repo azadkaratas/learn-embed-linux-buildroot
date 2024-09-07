@@ -1,0 +1,7 @@
+menu "Target packages"
+    source "$BR2_EXTERNAL_BACKGROUND_LOGGER_PATH/package/periodiclogger/Config.in"
+endmenu
+
+menu "Select the board"
+    source "$BR2_EXTERNAL_BACKGROUND_LOGGER_PATH/board/raspberrypi0w/Config.in"
+endmenu

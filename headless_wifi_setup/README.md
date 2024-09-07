@@ -22,14 +22,11 @@ The files that need to be modified for this setup are stored in the `board/` fol
 
 ### SSH Connection:
 Once the board is powered up and connected to the network, you can use SSH to log in remotely:
-> *ssh root@192.168.222.222*
-> password: root
+```
+ssh root@192.168.222.222
+password: root
+```
 
 ### Supported boards:
-[x] Raspberry Pi Zero W
-[ ] Raspberry Pi 3B+
-
-### How to Build:
-From main directory, simply execute below commands according to your board:
-> make headless_wifi_setup_rpi0
-> make headless_wifi_setup_rpi3b+
+- [x] Raspberry Pi Zero W
+- [ ] Raspberry Pi 3B+
