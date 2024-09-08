@@ -28,5 +28,9 @@ In this example, a simple daemon is being started automatically after the boot a
 
 With this, we will learn how to add our own process and how we make it start automatically. Again, package has been added as external out-of-tree structure. WiFi and SSH settings are the same as previous example and still exists in this example as well. Post build process has one more operation in this example which is copying the S99periodiclogger file under /etc/init.d/ folder.
 
+### [DBUS Example](/dbus_example/README.md)
+
+In this example, two simple processes are being communicating over system bus with DBUS. This example shows how to use system bus by adding new policy and shows what changes are required to communicate over session bus. Server side waits for a message from client and when received a message it both prints and logs. 
+
 ---
 All suggestions, bug reports and contributions are welcomed.

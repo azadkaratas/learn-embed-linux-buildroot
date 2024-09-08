@@ -12,6 +12,11 @@ background_logger_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
 	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../background_logger
 
+# Project 3
+dbus_example_rpi0w:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../dbus_example
+
 all:
 	$(MAKE) -C $(BUILDROOT_DIR)
 

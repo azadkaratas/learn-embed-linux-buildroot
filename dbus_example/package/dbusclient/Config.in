@@ -1,0 +1,5 @@
+config BR2_PACKAGE_DBUSCLIENT
+        bool "dbusclient"
+		default y
+        help
+          Sends data to DBUS server. Should be run manually.

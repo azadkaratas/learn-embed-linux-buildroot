@@ -1,0 +1,5 @@
+config BR2_PACKAGE_DBUSSERVER
+        bool "dbusserver"
+		default y
+        help
+          Runs as background daemon. Listens the DBUS.

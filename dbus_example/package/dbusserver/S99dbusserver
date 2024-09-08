@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case $1 in
+    start)
+	printf "Starting dbusserver"
+	start-stop-daemon -S -q -p /var/run/dbusserver.pid --exec /usr/bin/dbusserver
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    stop)
+	printf "Stopping dbusserver: "
+	start-stop-daemon -K -q -p /var/run/dbusserver.pid
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    restart)
+	$0 stop
+	$0 start
+	;;
+    *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+	;;
+esac
