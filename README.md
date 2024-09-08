@@ -32,5 +32,9 @@ With this, we will learn how to add our own process and how we make it start aut
 
 In this example, two simple processes are being communicating over system bus with DBUS. This example shows how to use system bus by adding new policy and shows what changes are required to communicate over session bus. Server side waits for a message from client and when received a message it both prints and logs. 
 
+### [Web Server Example with Nginx](/webserver_nginx/README.md)
+
+In this example, a simple web server is created using Nginx with Buildroot. First, the Buildroot configuration is opened, the Nginx package is selected, and the system is built with Nginx. Next, the Nginx configuration file (nginx.conf) is edited, a /www directory is created for the web content, and the content is placed there. Once Nginx is started, the server becomes accessible via the device's IP address.
+
 ---
 All suggestions, bug reports and contributions are welcomed.

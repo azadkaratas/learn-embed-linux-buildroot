@@ -17,8 +17,10 @@ dbus_example_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
 	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../dbus_example
 
-all:
-	$(MAKE) -C $(BUILDROOT_DIR)
+# Project 4
+webserver_nginx_rpi0w:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../webserver_nginx
 
 menuconfig:
 	$(MAKE) -C $(BUILDROOT_DIR) menuconfig

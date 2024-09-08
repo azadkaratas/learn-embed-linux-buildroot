@@ -1,0 +1,4 @@
+config BR2_TARGET_BOARD_RPI_ZERO
+    bool "Customize Raspberry Pi Zero"
+    help
+      Use this option to build a custom Raspberry Pi Zero image.
