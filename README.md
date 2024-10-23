@@ -8,17 +8,14 @@ Detailed project explanations can be found under related project folder.
 ### How to Build Projects:
 From /buildroot directory, simply execute below commands according to your board:
 ```
-make BR2_EXTERNAL=../headless_wifi_setup      --- Select the desired project
-make custom_raspberrypi0w_defconfig           --- Select the board
-make                                          --- Build the project
+make BR2_EXTERNAL=../headless_wifi_setup menuconfig  --- Select the desired project
+make headless_wifi_setup                             --- Build the project
 ```
 
 ## Projects
 ### [Headless WiFi Setup](/headless_wifi_setup/README.md)
 
-In this simple and first project, buildroot is configured to work with static address WiFi mode and SSH support.
-Necessary files needs to be changed are under board/ folder. Copying these files to the related places is written
-in post build script.
+In this simple and first project, buildroot is configured to work with static address WiFi mode and SSH support. Necessary files needs to be changed are under board/ folder. Copying these files to the related places is written in post build script.
 
 With interfaces file, we set our device a static IP. Make sure address is unique in your network domain and other parameters are correct. Do not forget to set your WiFi credentials in wpa_supplicant.conf.
 
@@ -35,6 +32,10 @@ In this example, two simple processes are being communicating over system bus wi
 ### [Web Server Example with Nginx](/webserver_nginx/README.md)
 
 In this example, a simple web server is created using Nginx with Buildroot. First, the Buildroot configuration is opened, the Nginx package is selected, and the system is built with Nginx. Next, the Nginx configuration file (nginx.conf) is edited, a /www directory is created for the web content, and the content is placed there. Once Nginx is started, the server becomes accessible via the device's IP address.
+
+### [Nginx Web Server with NodeJs](/nginx_nodejs/README.md)
+
+In this example, NodeJs support has been added to nginx web server. The script S99nodejs is starting the NodeJs. Nginx has been configured to serve as reverse proxy and will forward the HTTP requests to NodeJs.  You will see a basic device management page and for further projects, we will be using this web template.
 
 ---
 All suggestions, bug reports and contributions are welcomed.

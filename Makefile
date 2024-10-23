@@ -22,6 +22,11 @@ webserver_nginx_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
 	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../webserver_nginx
 
+# Project 5
+nginx_nodejs_rpi0w:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nginx_nodejs
+
 menuconfig:
 	$(MAKE) -C $(BUILDROOT_DIR) menuconfig
 

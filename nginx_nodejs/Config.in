@@ -1,0 +1,3 @@
+menu "Select the board"
+source "$BR2_EXTERNAL_NGINX_NODEJS_PATH/board/raspberrypi0w/Config.in"
+endmenu

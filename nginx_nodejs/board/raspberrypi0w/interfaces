@@ -1,0 +1,13 @@
+auto lo
+iface lo inet loopback
+auto wlan0
+iface wlan0 inet static
+    address 192.168.178.178
+    netmask 255.255.255.0
+    network 192.168.178.0
+    broadcast 192.168.178.255
+    gateway 192.168.178.1
+    pre-up wpa_supplicant -B -Dnl80211 -iwlan0 -c/etc/wpa_supplicant.conf
+    post-down killall -q wpa_supplicant
+    wait-delay 15
+iface default inet static
