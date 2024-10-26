@@ -22,10 +22,11 @@ Session bus does not need a policy to be able to run this example. But we need t
     conn = dbus_bus_get(DBUS_BUS_SESSION, &err); // to this
 ```
 
-* The server process will not start automatically since it won't find a session bus. The daemon an be configured to create the dbus session at the start and save the dbus session id to /tmp/common-dbus-session-addr.txt. But for the simplicity, we will create the session run-time manually. Below command will start a session and save it to /tmp/common-dbus-session-addr.txt. After this, we can run our server application.
+* The server process will not start automatically since it won't find a session bus. The daemon can be configured to create the dbus session at the start and save the dbus session id to /tmp/common-dbus-session-addr.txt. But for the simplicity, we will create the session run-time manually. Below command will start a session and save it to /tmp/common-dbus-session-addr.txt. After this, we can run our server application.
 
 ```
 dbus-daemon --session --fork --print-address 1 > /tmp/common-dbus-session-addr
+export DBUS_SESSION_BUS_ADDRESS=$(cat /tmp/common-dbus-session-addr)
 /usr/bin/dbusserver
 ```
 
