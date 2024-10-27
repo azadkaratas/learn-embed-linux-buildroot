@@ -6,10 +6,12 @@ Buildroot is an excellent tool for generating minimal and optimized Linux distri
 Detailed project explanations can be found under related project folder.
 
 ### How to Build Projects:
-From /buildroot directory, simply execute below commands according to your board:
+Simply execute below commands according to your board:
 ```
-make BR2_EXTERNAL=../headless_wifi_setup menuconfig  --- Select the desired project
-make headless_wifi_setup                             --- Build the project
+cd buildroot                                         --- Change directory to buildroot
+make BR2_EXTERNAL=../headless_wifi_setup menuconfig  --- Select the desired project, enter menuconfig and quit to press ESC
+cd ..                                                --- Change directory to top dir
+make headless_wifi_setup_rpi0w                       --- Build the project
 ```
 
 ## Projects
@@ -36,6 +38,10 @@ In this example, a simple web server is created using Nginx with Buildroot. Firs
 ### [Nginx Web Server with NodeJs](/nginx_nodejs/README.md)
 
 In this example, NodeJs support has been added to nginx web server. The script S99nodejs is starting the NodeJs. Nginx has been configured to serve as reverse proxy and will forward the HTTP requests to NodeJs.  You will see a basic device management page and for further projects, we will be using this web template.
+
+### [Web Server with NodeJs and DBUS support](/nodejs_dbus/README.md)
+
+In this example, we will connect web interface with a C program and communicate over system DBUS. A simple calculation tab has been added to the web GUI. In this tab, two values are sent over DBUS to the messenger process, where they are summed, and the result is returned. WebCtl then displays the result.
 
 ---
 All suggestions, bug reports and contributions are welcomed.

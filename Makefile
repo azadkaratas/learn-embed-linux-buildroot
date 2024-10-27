@@ -27,6 +27,11 @@ nginx_nodejs_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
 	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nginx_nodejs
 
+# Project 6
+nodejs_dbus_rpi0w:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nodejs_dbus
+
 menuconfig:
 	$(MAKE) -C $(BUILDROOT_DIR) menuconfig
 

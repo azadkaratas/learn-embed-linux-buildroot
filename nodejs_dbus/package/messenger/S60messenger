@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case $1 in
+    start)
+	printf "Starting messenger: "
+	start-stop-daemon --start --background -p /var/run/messenger.pid --exec /usr/bin/messenger
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    stop)
+	printf "Stopping messenger: "
+	killall messenger
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    restart)
+	$0 stop
+	$0 start
+	;;
+    *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+	;;
+esac

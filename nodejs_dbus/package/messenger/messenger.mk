@@ -1,0 +1,27 @@
+MESSENGER_VERSION = 1.0
+MESSENGER_SITE = $(BR2_EXTERNAL_NODEJS_DBUS_PATH)/package/messenger/src
+MESSENGER_SITE_METHOD = local
+
+MESSENGER_DEPENDENCIES = dbus 
+
+MESSENGER_CFLAGS = $(TARGET_CFLAGS)
+MESSENGER_CFLAGS += -I$(STAGING_DIR)/usr/include/dbus-1.0
+MESSENGER_CFLAGS += -I$(STAGING_DIR)/usr/lib/dbus-1.0/include
+
+MESSENGER_LDFLAGS = $(TARGET_LDFLAGS)
+MESSENGER_LDFLAGS += -L$(STAGING_DIR)/usr/lib -ldbus-1
+
+define MESSENGER_BUILD_CMDS
+	$(MAKE) CC="$(TARGET_CC)" -C $(@D) CFLAGS="$(MESSENGER_CFLAGS)" LDFLAGS="$(MESSENGER_LDFLAGS)"
+endef
+
+define MESSENGER_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0755 $(@D)/messenger $(TARGET_DIR)/usr/bin
+endef
+
+define MESSENGER_INSTALL_INIT_SYSV
+	$(INSTALL) -D -m 0755 $(BR2_EXTERNAL_NODEJS_DBUS_PATH)/package/messenger/S60messenger \
+		$(TARGET_DIR)/etc/init.d/S60messenger
+endef
+
+$(eval $(generic-package))

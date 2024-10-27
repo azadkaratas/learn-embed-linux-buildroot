@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MESSENGER
+    bool "messenger"
+		default y
+    help
+      Runs as background daemon. Listens the DBUS and parses the messages.

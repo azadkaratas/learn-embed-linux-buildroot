@@ -1,0 +1,8 @@
+menu "Target packages"
+    source "$BR2_EXTERNAL_NODEJS_DBUS_PATH/package/webctl/Config.in"
+    source "$BR2_EXTERNAL_NODEJS_DBUS_PATH/package/messenger/Config.in"
+endmenu
+
+menu "Select the board"
+    source "$BR2_EXTERNAL_NODEJS_DBUS_PATH/board/raspberrypi0w/Config.in"
+endmenu
