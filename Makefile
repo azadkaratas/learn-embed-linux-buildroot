@@ -23,7 +23,11 @@ background_logger_rpi3-64:
 # Project 3
 dbus_example_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
-	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../dbus_example
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../dbus_example BOARD_NAME=raspberrypi0w
+
+dbus_example_rpi3-64:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../dbus_example BOARD_NAME=raspberrypi3-64
 
 # Project 4
 webserver_nginx_rpi0w:

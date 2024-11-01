@@ -1,0 +1,4 @@
+config BR2_TARGET_BOARD_RPI_3B
+    bool "Customize Raspberry Pi 3B+"
+    help
+      Use this option to build a custom Raspberry Pi 3B+ image.
