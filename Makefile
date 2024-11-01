@@ -5,7 +5,11 @@ BUILDROOT_DIR = $(shell pwd)/buildroot
 # Project 1
 headless_wifi_setup_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
-	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../headless_wifi_setup
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../headless_wifi_setup BOARD_NAME=raspberrypi0w
+
+headless_wifi_setup_rpi3-64:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../headless_wifi_setup BOARD_NAME=raspberrypi3-64
 
 # Project 2
 background_logger_rpi0w:

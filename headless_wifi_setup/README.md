@@ -4,9 +4,7 @@ This project focuses on setting up a Raspberry Pi (or other similar embedded boa
 
 The project utilizes Buildroot to create a custom Linux image that is preconfigured to connect to a WiFi network using the credentials provided by the user. A static IP address is assigned to the board, making it easy to locate on a local network, which is especially useful in headless setups. Additionally, SSH is enabled by default, allowing the user to remotely connect to and manage the board from another device.
 
-In this simple and first project, buildroot is configured to work with static address WiFi mode and SSH support.
-Necessary files needs to be changed are under board/ folder. Copying these files to the related places is written
-in post-build.sh file.
+In this simple and first project, buildroot is configured to work with static address WiFi mode and SSH support. Necessary files need to be changed are under board/ folder. Copying these files to the related places is written in post-build.sh file.
 
 The files that need to be modified for this setup are stored in the `board/` folder. After making the necessary changes, these files will be copied to the appropriate locations during the build process via the `post-build.sh` script.
 
@@ -23,10 +21,10 @@ The files that need to be modified for this setup are stored in the `board/` fol
 ### SSH Connection:
 Once the board is powered up and connected to the network, you can use SSH to log in remotely:
 ```
-ssh root@192.168.222.222
+ssh root@192.168.222.222    or whatever is set in wpa_supplicant.conf file
 password: root
 ```
 
 ### Supported boards:
 - [x] Raspberry Pi Zero W
-- [ ] Raspberry Pi 3B+
+- [x] Raspberry Pi 3B+
