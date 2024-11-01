@@ -14,7 +14,11 @@ headless_wifi_setup_rpi3-64:
 # Project 2
 background_logger_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
-	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../background_logger
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../background_logger BOARD_NAME=raspberrypi0w
+
+background_logger_rpi3-64:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../background_logger BOARD_NAME=raspberrypi3-64
 
 # Project 3
 dbus_example_rpi0w:
