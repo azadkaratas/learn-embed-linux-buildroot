@@ -27,4 +27,4 @@ password: root
 
 ### Supported boards:
 - [x] Raspberry Pi Zero W
-- [ ] Raspberry Pi 3B+
+- [x] Raspberry Pi 3B+

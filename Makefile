@@ -50,7 +50,11 @@ nginx_nodejs_rpi3-64:
 # Project 6
 nodejs_dbus_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
-	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nodejs_dbus
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nodejs_dbus BOARD_NAME=raspberrypi0w
+
+nodejs_dbus_rpi3-64:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nodejs_dbus BOARD_NAME=raspberrypi3-64
 
 menuconfig:
 	$(MAKE) -C $(BUILDROOT_DIR) menuconfig
