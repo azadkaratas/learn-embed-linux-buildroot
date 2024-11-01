@@ -41,7 +41,11 @@ webserver_nginx_rpi3-64:
 # Project 5
 nginx_nodejs_rpi0w:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
-	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nginx_nodejs
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nginx_nodejs BOARD_NAME=raspberrypi0w
+
+nginx_nodejs_rpi3-64:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../nginx_nodejs BOARD_NAME=raspberrypi3-64
 
 # Project 6
 nodejs_dbus_rpi0w:
