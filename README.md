@@ -43,5 +43,9 @@ In this example, NodeJs support has been added to nginx web server. The script S
 
 In this example, we will connect web interface with a C program and communicate over system DBUS. A simple calculation tab has been added to the web GUI. In this tab, two values are sent over DBUS to the messenger process, where they are summed, and the result is returned. WebCtl then displays the result.
 
+### [Headless WiFi and Ethernet Setup](/headless_wifi_eth_setup/README.md)
+
+This project focuses on setting up a Raspberry Pi (or other similar embedded boards) in a "headless" configuration, meaning it can be operated without a monitor or keyboard attached. The main goal of the project is to establish a wireless network (WiFi) and Ethernet connections with static IP addresses and enable secure remote access via SSH.
+
 ---
 All suggestions, bug reports and contributions are welcomed.

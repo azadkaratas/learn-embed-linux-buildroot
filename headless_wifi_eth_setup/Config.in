@@ -1,0 +1,5 @@
+menu "Select the Raspberry Pi board for external headless WiFi and Ethernet setup"
+
+source "$BR2_EXTERNAL_HEADLESS_WIFI_ETH_SETUP_PATH/board/raspberrypi3-64/Config.in"
+
+endmenu
