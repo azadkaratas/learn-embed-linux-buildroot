@@ -1,0 +1,5 @@
+config BR2_PACKAGE_WEBCTL
+    bool "WebCtl Package"
+		default y
+    help
+      WebCtl is a package that controls tasks coming from the web and manages web files.

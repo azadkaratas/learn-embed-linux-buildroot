@@ -61,6 +61,15 @@ headless_wifi_eth_setup_rpi3-64:
 	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
 	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../headless_wifi_eth_setup BOARD_NAME=raspberrypi3-64
 
+# Project 8
+access_point_rpi0w:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi0w_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../access_point BOARD_NAME=raspberrypi0w
+
+access_point_rpi3-64:
+	$(MAKE) -C $(BUILDROOT_DIR) custom_raspberrypi3b_64_defconfig
+	$(MAKE) -C $(BUILDROOT_DIR) BR2_EXTERNAL=../access_point BOARD_NAME=raspberrypi3-64
+
 menuconfig:
 	$(MAKE) -C $(BUILDROOT_DIR) menuconfig
 

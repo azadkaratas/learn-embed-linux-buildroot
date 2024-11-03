@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case $1 in
+    start)
+	printf "Starting webctl: "
+	start-stop-daemon --start -q --exec node /usr/html/app.js > /var/log/nodejs_app.log 2>&1 &
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    stop)
+	printf "Stopping webctl: "
+	killall node
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+	;;
+    restart)
+	$0 stop
+	$0 start
+	;;
+    *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+	;;
+esac

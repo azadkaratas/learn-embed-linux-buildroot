@@ -47,5 +47,9 @@ In this example, we will connect web interface with a C program and communicate 
 
 This project focuses on setting up a Raspberry Pi (or other similar embedded boards) in a "headless" configuration, meaning it can be operated without a monitor or keyboard attached. The main goal of the project is to establish a wireless network (WiFi) and Ethernet connections with static IP addresses and enable secure remote access via SSH.
 
+### [WiFi Access Point](/access_point/README.md)
+
+In this example, our device will become a WiFi access point and we will reach out to device configuration web page with a static IP address. Again, Nginx and NodeJs will be used for web page. DHCP is used for IP assignment to the connected devices.
+
 ---
 All suggestions, bug reports and contributions are welcomed.
